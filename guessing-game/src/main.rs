@@ -9,7 +9,7 @@ fn main() {
 
     let mut guess_counter = 0;
 
-    let guess_limit = 10;
+    const GUESS_LIMIT: u32 = 10;
 
     loop {
         println!("Please input your guess.");
@@ -38,8 +38,8 @@ fn main() {
 
         guess_counter = guess_counter + 1;
 
-        match guess_counter.cmp(&guess_limit) {
-            Ordering::Less => println!("You have {} guesses left!", (guess_limit - guess_counter)),
+        match guess_counter.cmp(&GUESS_LIMIT) {
+            Ordering::Less => println!("You have {} guesses left!", (GUESS_LIMIT - guess_counter)),
             Ordering::Equal => {
                 println!("You are out of guesses!");
                 println!("The secret number was: {}", secret_number);
