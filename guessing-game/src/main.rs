@@ -36,7 +36,7 @@ fn main() {
             }
         }
 
-        guess_counter = guess_counter + 1;
+        guess_counter += 1;
 
         match guess_counter.cmp(&GUESS_LIMIT) {
             Ordering::Less => println!("You have {} guesses left!", (GUESS_LIMIT - guess_counter)),
