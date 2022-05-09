@@ -2,3 +2,5 @@ target/
 debug/
 
 **/*.rs.bk
+
+guessing-game/target/.rustc_info.json
